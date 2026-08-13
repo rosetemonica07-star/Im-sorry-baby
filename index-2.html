@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Wifey 💗</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffeef5, #ffdce9, #fff5f8);
+    color: #713b50;
+    overflow-x: hidden;
+  }
+
+  .petal {
+    position: fixed;
+    width: 14px;
+    height: 20px;
+    background: #f7a9c4;
+    border-radius: 100% 0 100% 0;
+    opacity: .35;
+    animation: fall linear infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .petal:nth-child(1){left:8%;animation-duration:8s;animation-delay:-2s}
+  .petal:nth-child(2){left:25%;animation-duration:11s;animation-delay:-6s}
+  .petal:nth-child(3){left:47%;animation-duration:9s;animation-delay:-4s}
+  .petal:nth-child(4){left:68%;animation-duration:12s;animation-delay:-8s}
+  .petal:nth-child(5){left:88%;animation-duration:10s;animation-delay:-3s}
+
+  @keyframes fall {
+    0% { transform: translateY(-30px) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    width: min(92%, 700px);
+    margin: auto;
+    padding: 35px 0 55px;
+  }
+
+  .card {
+    background: rgba(255,255,255,.82);
+    border: 2px solid #f6bfd1;
+    border-radius: 30px;
+    padding: 34px 25px;
+    text-align: center;
+    box-shadow: 0 18px 45px rgba(166, 78, 112, .15);
+    backdrop-filter: blur(8px);
+  }
+
+  .flowers { font-size: 2rem; letter-spacing: 8px; }
+  .cat {
+    font-size: 5rem;
+    margin: 12px 0 0;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  h1 {
+    color: #c85b83;
+    font-size: clamp(2rem, 8vw, 3.4rem);
+    margin: 8px 0;
+  }
+  h2 { color: #b64f76; }
+  p {
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .small { font-size: .92rem; color: #956176; }
+
+  button {
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 25px;
+    margin: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease;
+    box-shadow: 0 7px 15px rgba(166,78,112,.15);
+  }
+  button:hover { transform: translateY(-3px) scale(1.02); }
+  .pink { background: #e98faf; color: white; }
+  .light { background: #ffe1eb; color: #a4476c; }
+
+  .hidden { display: none; }
+
+  .message {
+    margin-top: 22px;
+    padding: 22px;
+    background: #fff0f5;
+    border-radius: 22px;
+    border: 1px dashed #e89ab6;
+    text-align: left;
+  }
+
+  .promise {
+    background: #fff8fb;
+    border-radius: 20px;
+    padding: 18px;
+    margin: 18px 0;
+  }
+  .promise p { margin: 8px 0; }
+
+  .yes-screen {
+    animation: pop .6s ease;
+  }
+  @keyframes pop {
+    0% { transform: scale(.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .heart {
+    position: fixed;
+    pointer-events: none;
+    font-size: 25px;
+    animation: heartUp 2.4s ease-out forwards;
+    z-index: 10;
+  }
+  @keyframes heartUp {
+    0% { transform: translateY(0) scale(.6); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(30deg) scale(1.4); opacity: 0; }
+  }
+
+  .footer { margin-top: 22px; font-size: .9rem; color: #a06a80; }
+</style>
+</head>
+
+<body>
+<div class="petal"></div><div class="petal"></div><div class="petal"></div>
+<div class="petal"></div><div class="petal"></div>
+
+<main class="wrap">
+  <section class="card" id="mainCard">
+    <div class="flowers">🌷 🌸 🌷</div>
+    <div class="cat">🐱</div>
+    <h1>For My Wifey 💗</h1>
+    <p>Okay baby... I made something for you because I have something I really, really want to say. 🥺</p>
+    <button class="pink" onclick="showApology()">Click me, Wife 💌</button>
+    <p class="small">Warning: contains one very sorry girlfriend and too many hearts. 😭💕</p>
+  </section>
+</main>
+
+<script>
+function showApology() {
+  document.getElementById("mainCard").innerHTML = `
+    <div class="flowers">🌸 🌷 🌸</div>
+    <div class="cat">🥺🐱</div>
+    <h2>I'm really sorry, Baby.</h2>
+
+    <div class="message">
+      <p><b>Hey Wife,</b></p>
+      <p>
+        I'm so, so sorry for making you feel like I was angry at you.
+        I wasn't angry, Love. I just took what happened in a bad way and
+        started looking for an explanation because I didn't understand why
+        or how you could say those things.
+      </p>
+      <p>
+        But then I realized you were just playing and joking with me,
+        and I'm really sorry that I let my feelings turn something small
+        into a fight.
+      </p>
+      <p>
+        I should have asked you calmly instead of reacting the way I did.
+        You didn't deserve to feel like I was mad at you, especially when
+        you were only trying to play around with me.
+      </p>
+      <p>
+        I'm not saying sorry just because I want the fight to be over.
+        I'm saying sorry because I genuinely understand that I could have
+        handled it better. I love you too much to let a little
+        misunderstanding become something that hurts us.
+      </p>
+      <p>
+        So... I'm really, really sorry, baby. 🥺💗
+        I love you, Wife. More than all these flowers... and that's a LOT
+        of flowers. 🌷🌸😂
+      </p>
+    </div>
+
+    <button class="pink" onclick="showPromise()">There's more... 💕</button>
+  `;
+}
+
+function showPromise() {
+  document.getElementById("mainCard").innerHTML = `
+    <div class="flowers">🌷🌸🌷🌸🌷</div>
+    <div class="cat">🐱💐</div>
+    <h2>A little promise for my Love 💗</h2>
+
+    <div class="promise">
+      <p>🌸 I promise to try to understand before I react.</p>
+      <p>🌸 I promise to communicate with you instead of assuming.</p>
+      <p>🌸 I promise to remember that sometimes you're just being silly with me. 😂</p>
+      <p>🌸 And when I do mess up, I promise to own it and sincerely apologize.</p>
+    </div>
+
+    <p>
+      I don't expect you to magically forget everything just because
+      I made this cute little website. 🥺
+    </p>
+    <p>
+      I just wanted to make you smile a little and remind you that
+      <b>you are my favorite person, my Wife, my Baby, and my Love.</b> 💗
+    </p>
+
+    <h2>So, Wife... 🥺</h2>
+    <p><b>Will you forgive your silly girlfriend?</b></p>
+
+    <button class="pink" onclick="yes()">YES, I forgive you 💗</button>
+    <button class="light" onclick="time()">I need a little time 🥺</button>
+  `;
+}
+
+function yes() {
+  document.getElementById("mainCard").innerHTML = `
+    <div class="yes-screen">
+      <div class="flowers">🌸🌷🌸🌷🌸</div>
+      <div class="cat">😽💗</div>
+      <h1>YAYYYYY!! 😭💗</h1>
+      <h2>THANK YOU, WIFE!!</h2>
+      <p>
+        I promise I'll do better, Love.
+        Now come here so I can give you the biggest hug ever. 🫂💗
+      </p>
+      <p style="font-size:2rem">🐱💐💗🌸💗🌷💗🐱</p>
+      <p><b>I LOVE YOU SO MUCH, BABY. 💕</b></p>
+    </div>
+  `;
+  for(let i=0;i<45;i++) setTimeout(createHeart, i*45);
+}
+
+function time() {
+  document.getElementById("mainCard").innerHTML = `
+    <div class="flowers">🌷 🌸 🌷</div>
+    <div class="cat">🐱💗</div>
+    <h1>That's okay, Baby. 🥺</h1>
+    <p>
+      Take whatever time you need, Wife.
+      I won't pressure you or expect you to instantly feel okay.
+    </p>
+    <p>
+      I just wanted you to know that I love you, I'm sorry,
+      and I'm going to try to handle things better next time. 💗
+    </p>
+    <p style="font-size:2rem">🌸🫂🐱💐</p>
+    <button class="pink" onclick="location.reload()">Read my apology again 💌</button>
+  `;
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = ["💗","💕","💖","🌸","🌷","💐"][Math.floor(Math.random()*6)];
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.bottom = "-30px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 2500);
+}
+</script>
+</body>
+</html>
